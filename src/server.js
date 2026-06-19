@@ -22,6 +22,6 @@ app.use('/api/admin', adminRouter);
 app.use((req, res) => res.status(404).json({ error: 'Non trovato' }));
 
 const PORT = process.env.PORT || 4000;
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server avviato su http://localhost:${PORT}`);
 });
